@@ -10,29 +10,33 @@
 
 **代码**
 
-"""
-import base64
 
-base_list='AGV5IULSB3ZLVSE='
+	import base64
 
-base_list=list(base_list)
-def fun(a,b):
-    
-    if a==b:
-        return ;
-    for i in range(a,b):
-        if base_list[i]>= 'A' and base_list[i]<='Z':  
-               
-            base_list[i]=chr(ord(base_list[i])+32)
-            base_str="".join(base_list) 
-            try:
-                key=base64.b64decode(base_str.encode('utf-8')).decode('utf-8')
-                print(key)           
-            except:
-                pass
-            fun(i+1,b)          
-            base_list[i]=chr(ord(base_list[i])-32)
-fun(0,len(base_list))
-"""
+	base_list='AGV5IULSB3ZLVSE='
 
-<img src="https://etowtf.github.io/assets/images/decodebase64.png" width="50%">
+	base_list=list(base_list)
+	def fun(a,b):
+		
+		if a==b:
+			return ;
+		for i in range(a,b):
+			if base_list[i]>= 'A' and base_list[i]<='Z':  
+				   
+				base_list[i]=chr(ord(base_list[i])+32)
+				base_str="".join(base_list) 
+				try:
+					key=base64.b64decode(base_str.encode('utf-8')).decode('utf-8')
+					print(key)           
+				except:
+					pass
+				fun(i+1,b)          
+				base_list[i]=chr(ord(base_list[i])-32)
+	fun(0,len(base_list))
+
+
+<img src="https://etowtf.github.io/assets/images/python-base/decodebase64.png" width="50%">
+
+<img src="https://etowtf.github.io/assets/images/python-base/result.png" width="50%">
+
+**成功爆破出来**

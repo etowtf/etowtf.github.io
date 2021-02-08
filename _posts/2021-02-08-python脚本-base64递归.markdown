@@ -35,4 +35,4 @@ def fun(a,b):
 fun(0,len(base_list))
 """
 
-<img src="../assets/images/decodebase64.png" width="50%">
+<img src="../../../assets/images/decodebase64.png" width="50%">

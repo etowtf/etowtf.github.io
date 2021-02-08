@@ -17,12 +17,12 @@ base_list='AGV5IULSB3ZLVSE='
 
 base_list=list(base_list)
 def fun(a,b):
-    #终止条件
+    
     if a==b:
         return ;
     for i in range(a,b):
         if base_list[i]>= 'A' and base_list[i]<='Z':  
-            #大写转小写        
+               
             base_list[i]=chr(ord(base_list[i])+32)
             base_str="".join(base_list) 
             try:
@@ -35,4 +35,4 @@ def fun(a,b):
 fun(0,len(base_list))
 """
 
-<img src="../../../assets/images/decodebase64.png" width="50%">
+<img src="https://etowtf.github.io/assets/images/decodebase64.png" width="50%">
